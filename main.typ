@@ -352,8 +352,8 @@ $
 ```py
 import matplotlib.pyplot as plt
 
-x_i = [2.5, 7.5, 12.5, 17.5, 22.5, 24.5]
-f_n = [15 / 50, 27 / 50, 36 / 50, 43 / 50, 47 / 50, 1]
+x_i = [10, 20, 30, 40, 50]
+f_n = [0.08, 0.32, 0.67, 0.905, 1.0]
 
 plt.figure(figsize=(10, 6))
 
@@ -369,7 +369,7 @@ for i in range(len(x_i)):
             linewidth=2,
         )
     else:
-        plt.hlines(y=f_n[i], xmin=x_i[i], xmax=30, colors="black",
+        plt.hlines(y=f_n[i], xmin=x_i[i], xmax=60, colors="black",
                    linewidth=2)
 
 for i in range(len(x_i)):
@@ -408,7 +408,7 @@ plt.plot(
 plt.xlabel("$x_i$", fontsize=12)
 plt.ylabel("$F_n$", fontsize=12)
 plt.title("Эмпирическая функция распределения")
-plt.xlim(-1, 30)
+plt.xlim(-1, 60)
 plt.ylim(-0.05, 1.1)
 plt.grid(True, alpha=0.3)
 plt.axhline(y=0, color="black", linewidth=0.5)
